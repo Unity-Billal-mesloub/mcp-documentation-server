@@ -1,7 +1,6 @@
 [![MCP Registry](https://img.shields.io/badge/MCP%20Registry-published-blue)](https://registry.modelcontextprotocol.io/servers/io.github.andrea9293/mcp-documentation-server)
 [![npm version](https://badge.fury.io/js/@andrea9293%2Fmcp-documentation-server.svg)](https://badge.fury.io/js/@andrea9293%2Fmcp-documentation-server)
 [![GitHub Stars](https://img.shields.io/github/stars/andrea9293/mcp-documentation-server?style=social)](https://github.com/andrea9293/mcp-documentation-server)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/andrea9293/mcp-documentation-server)
 
 [![Donate with PayPal](https://i.ibb.co/SX4qQBfm/paypal-donate-button171.png)](https://www.paypal.com/donate/?hosted_button_id=HXATGECV8HUJN)
@@ -27,13 +26,11 @@ Unlike other MCP servers that are CLI-only, this one ships with a **full web das
   "mcpServers": {
     "documentation": {
       "command": "npx",
-      "args": ["-y", "@andrea9293/mcp-documentation-server"]
+      "args": ["-y", "@Unity-Billal-mesloub/mcp-documentation-server"]
     }
   }
 }
 ```
-
-Open your browser at `http://localhost:3080` — the web UI starts automatically.
 
 ### 🤖 Agent Skill (REST API) — recommended for AI agents
 
@@ -50,7 +47,7 @@ curl -s -X POST http://127.0.0.1:3080/api/search-all \
 A ready-to-use skill is included at `skills/documentation-server/SKILL.md` — it teaches your agent every endpoint with examples. Install it:
 
 ```bash
-npx skills add https://github.com/andrea9293/mcp-documentation-server --skill documentation-server
+npx skills add https://github.com/Unity-Billal-mesloub/mcp-documentation-server --skill documentation-server
 ```
 
 ### Basic workflow
@@ -81,7 +78,7 @@ The web interface starts automatically on port **3080** when the MCP server laun
   "mcpServers": {
     "documentation": {
       "command": "npx",
-      "args": ["-y", "@andrea9293/mcp-documentation-server"]
+      "args": ["-y", "@Unity-Billal-mesloub/mcp-documentation-server"]
     }
   }
 }
@@ -94,7 +91,7 @@ The web interface starts automatically on port **3080** when the MCP server laun
   "mcpServers": {
     "documentation": {
       "command": "npx",
-      "args": ["-y", "@andrea9293/mcp-documentation-server"],
+      "args": ["-y", "@Unity-Billal-mesloub/mcp-documentation-server"],
       "env": {
         "MCP_BASE_DIR": "/path/to/workspace",
         "GEMINI_API_KEY": "your-api-key-here",
@@ -203,7 +200,7 @@ Server (FastMCP, stdio)
 ## Development
 
 ```bash
-git clone https://github.com/andrea9293/mcp-documentation-server.git
+git clone https://github.com/Unity-Billal-mesloub/mcp-documentation-server.git
 cd mcp-documentation-server
 npm install
 ```
@@ -224,14 +221,11 @@ npm run web:build # Run only the web UI (compiled)
 3. Follow [Conventional Commits](https://conventionalcommits.org/) for messages
 4. Open a pull request
 
-## License
-
-MIT — see [LICENSE](LICENSE)
 
 ## Support
 
-- 📖 [Documentation](https://github.com/andrea9293/mcp-documentation-server)
-- 🐛 [Report Issues](https://github.com/andrea9293/mcp-documentation-server/issues)
+- 📖 [Documentation](https://github.com/Unity-Billal-mesloub/mcp-documentation-server)
+- 🐛 [Report Issues](https://github.com/Unity-Billal-mesloub/mcp-documentation-server/issues)
 - 💬 [MCP Community](https://modelcontextprotocol.io/)
 - 🤖 [Google AI Studio](https://aistudio.google.com/app/apikey) — get a Gemini API key
 
@@ -241,4 +235,4 @@ MIT — see [LICENSE](LICENSE)
 
 [![Star History Chart](https://api.star-history.com/svg?repos=andrea9293/mcp-documentation-server&type=Date)](https://www.star-history.com/#andrea9293/mcp-documentation-server&Date)
 
-**Built with [FastMCP](https://github.com/punkpeye/fastmcp), [Orama](https://orama.com/), and TypeScript**
+**Built with [FastMCP](https://github.com/Unity-Billal-mesloub/fastmcp), [Orama](https://orama.com/), and TypeScript**
