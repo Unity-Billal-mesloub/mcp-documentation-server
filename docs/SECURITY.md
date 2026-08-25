@@ -112,9 +112,9 @@ This security policy covers:
 
 For security-related questions or concerns:
 - **General Security**: [andreabravaccino@gmail.com]
-- **Project Maintainer**: [@andrea9293](https://github.com/andrea9293)
-- **Repository**: [mcp-documentation-server](https://github.com/andrea9293/mcp-documentation-server)
+- **Project Maintainer**: [@andrea9293](https://github.com/Unity-Billal-mesloub)
+- **Repository**: [mcp-documentation-server](https://github.com/Unity-Billal-mesloub/mcp-documentation-server)
 
 ---
 
-*Last updated: June 16, 2025*
+
