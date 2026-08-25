@@ -31,12 +31,10 @@ Unlike other MCP servers that are CLI-only, this one ships with a **full web das
 
 ### 🤖 Agent Skill (REST API) — recommended for AI agents
 
-Every MCP tool is also accessible via the **REST API** on `http://127.0.0.1:3080/api/`. This is the recommended way to interact from AI agents (Claude Code, OpenCode, Gemini CLI, Cursor) because it avoids loading MCP tool schemas into the conversation context — only the response JSON enters.
+Every MCP tool is also accessible via the **REST API** on ``. This is the recommended way to interact from AI agents (Claude Code, OpenCode, Gemini CLI, Cursor) because it avoids loading MCP tool schemas into the conversation context — only the response JSON enters.
 
 ```bash
-curl -s http://127.0.0.1:3080/api/config
-curl -s http://127.0.0.1:3080/api/documents
-curl -s -X POST http://127.0.0.1:3080/api/search-all \
+
   -H "Content-Type: application/json" \
   -d '{"query": "your search", "limit": 5}'
 ```
