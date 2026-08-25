@@ -24,7 +24,7 @@ Calling the REST API directly (with `curl` or your agent's HTTP tool) is **more 
 
 ## Web Interface
 
-The server includes a full-featured **graphical web interface** at `http://127.0.0.1:3080` that runs automatically alongside the REST API. Use it for:
+The server includes a full-featured **graphical web interface** at `` that runs automatically alongside the REST API. Use it for:
 
 - **Dashboard** — overview of all documents and statistics
 - **Documents** — browse, view, and delete documents visually
@@ -40,17 +40,13 @@ The REST API is for programmatic access; the web UI is for visual exploration an
 
 ### 1. Check if the server is already running
 
-```bash
-curl -s http://127.0.0.1:3080/api/config
-```
-
 If you get a JSON response, the server is active. If the connection fails, proceed to start it.
 
 ### 2. Start the server (if inactive)
 
 ```bash
 # Start in background, redirect logs to a temp file
-npx -y @andrea9293/mcp-documentation-server > /tmp/doc-server.log 2>&1 &
+npx -y @Unity-Billal-mesloub/mcp-documentation-server > /tmp/doc-server.log 2>&1 &
 
 # Wait for startup (embedding model download may take a few extra seconds on first run)
 sleep 5
@@ -61,14 +57,12 @@ Then **verify** with the check step above. Retry after a few seconds if the mode
 ### 3. Optional: stop the server
 
 ```bash
-pkill -f "@andrea9293/mcp-documentation-server" || true
+pkill -f "@Unity-Billal-mesloub/mcp-documentation-server" || true
 ```
 
 The server is safe to leave running in the background between sessions.
 
 ## API Reference
-
-All endpoints are on `http://127.0.0.1:3080/api/`. All POST endpoints accept `Content-Type: application/json`.
 
 ### Document CRUD
 
@@ -103,18 +97,11 @@ All endpoints are on `http://127.0.0.1:3080/api/`. All POST endpoints accept `Co
 |--------|----------|-------------|
 | `GET` | `/api/config` | Server configuration (embedding model, Gemini availability) |
 
-## Example Usage
-
-### List all documents
-
-```bash
-curl -s http://127.0.0.1:3080/api/documents
-```
 
 ### Add a document
 
 ```bash
-curl -s -X POST http://127.0.0.1:3080/api/documents \
+
   -H "Content-Type: application/json" \
   -d '{
     "title": "My Document Title",
@@ -126,7 +113,6 @@ curl -s -X POST http://127.0.0.1:3080/api/documents \
 ### Search across all documents (hybrid search)
 
 ```bash
-curl -s -X POST http://127.0.0.1:3080/api/search-all \
   -H "Content-Type: application/json" \
   -d '{"query": "your search query here", "limit": 10}'
 ```
@@ -137,18 +123,12 @@ Each result includes:
 - `document_id` — ID of the document this chunk belongs to
 - `parent_index` — chunk index within the document (needed for context window queries)
 
-### Get a document's full content by ID
-
-```bash
-curl -s http://127.0.0.1:3080/api/documents/DOCUMENT_ID_HERE
-```
-
 Note: returns a **single object**, not an array.
 
 ### Search within a specific document
 
 ```bash
-curl -s -X POST http://127.0.0.1:3080/api/search \
+
   -H "Content-Type: application/json" \
   -d '{"document_id": "DOCUMENT_ID_HERE", "query": "search term", "limit": 5}'
 ```
@@ -158,39 +138,9 @@ curl -s -X POST http://127.0.0.1:3080/api/search \
 After search results give you a `document_id` and `parent_index`, expand the context:
 
 ```bash
-curl -s -X POST http://127.0.0.1:3080/api/context-window \
+
   -H "Content-Type: application/json" \
   -d '{"document_id": "DOCUMENT_ID_HERE", "parent_index": 3, "before": 2, "after": 2}'
-```
-
-### Delete a document
-
-```bash
-curl -s -X DELETE http://127.0.0.1:3080/api/documents/DOCUMENT_ID_HERE
-```
-
-### Process uploads folder
-
-```bash
-curl -s -X POST http://127.0.0.1:3080/api/uploads/process
-```
-
-### List uploads
-
-```bash
-curl -s http://127.0.0.1:3080/api/uploads
-```
-
-### Get uploads path
-
-```bash
-curl -s http://127.0.0.1:3080/api/uploads/path
-```
-
-### Check server configuration
-
-```bash
-curl -s http://127.0.0.1:3080/api/config
 ```
 
 Returns server metadata: embedding model, Gemini availability, chunking settings.
@@ -198,7 +148,7 @@ Returns server metadata: embedding model, Gemini availability, chunking settings
 ### AI-powered search (requires GEMINI_API_KEY)
 
 ```bash
-curl -s -X POST http://127.0.0.1:3080/api/search-ai \
+
   -H "Content-Type: application/json" \
   -d '{"document_id": "DOCUMENT_ID_HERE", "query": "what does this document say about X?"}'
 ```
@@ -215,9 +165,9 @@ Returns an AI-generated answer grounded in the document content.
 
 4. **Handle the `limit` parameter.** Default is 10. Increase for exhaustive searches, decrease for quick lookups.
 
-5. **Use the web UI** (`http://127.0.0.1:3080`) for visual browsing, drag-and-drop uploads, and one-off operations. The REST API is for programmatic access.
+5. **Use the web UI** (``) for visual browsing, drag-and-drop uploads, and one-off operations. The REST API is for programmatic access.
 
-6. **Document IDs are opaque strings** (e.g. `4ecc2235ec887d3e`). Always list documents first to get the correct ID.
+6. **Document IDs are opaque strings** (e.g. ``). Always list documents first to get the correct ID.
 
 7. **First startup may be slow** because the embedding model (~80 MB) is downloaded from Hugging Face. Subsequent starts are fast.
 
