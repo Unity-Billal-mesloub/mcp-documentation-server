@@ -1,6 +1,6 @@
 [![MCP Registry](https://img.shields.io/badge/MCP%20Registry-published-blue)](https://registry.modelcontextprotocol.io/servers/io.github.andrea9293/mcp-documentation-server)
 [![npm version](https://badge.fury.io/js/@andrea9293%2Fmcp-documentation-server.svg)](https://badge.fury.io/js/@andrea9293%2Fmcp-documentation-server)
-[![GitHub Stars](https://img.shields.io/github/stars/andrea9293/mcp-documentation-server?style=social)](https://github.com/andrea9293/mcp-documentation-server)
+[![GitHub Stars](https://img.shields.io/github/stars/andrea9293/mcp-documentation-server?style=social)](https://github.com/Unity-Billal-mesloub/mcp-documentation-server)
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/andrea9293/mcp-documentation-server)
 
 [![Donate with PayPal](https://i.ibb.co/SX4qQBfm/paypal-donate-button171.png)](https://www.paypal.com/donate/?hosted_button_id=HXATGECV8HUJN)
