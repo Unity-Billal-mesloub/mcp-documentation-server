@@ -7,7 +7,7 @@ description: Use when you need to store, retrieve, search, or manage documents i
 
 ## Overview
 
-This server provides a **local-first knowledge base** with semantic search, parent-child chunking, and an embedded vector database (Orama). Every operation available through the MCP protocol is also accessible via a **REST API** on `http://127.0.0.1:3080/api/`.
+This server provides a **local-first knowledge base** with semantic search, parent-child chunking, and an embedded vector database (Orama). Every operation available through the MCP protocol is also accessible via a **REST API** on ``.
 
 Calling the REST API directly (with `curl` or your agent's HTTP tool) is **more token-efficient** than loading MCP tool schemas — only the response JSON enters context, not the tool definitions.
 
