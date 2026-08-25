@@ -3,9 +3,6 @@
 [![GitHub Stars](https://img.shields.io/github/stars/andrea9293/mcp-documentation-server?style=social)](https://github.com/Unity-Billal-mesloub/mcp-documentation-server)
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/andrea9293/mcp-documentation-server)
 
-[![Donate with PayPal](https://i.ibb.co/SX4qQBfm/paypal-donate-button171.png)](https://www.paypal.com/donate/?hosted_button_id=HXATGECV8HUJN)
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://buymeacoffee.com/andrea.bravaccino)
-
 # MCP Documentation Server
 
 **Local-first document management and semantic search for AI coding agents.** No external databases, no cloud APIs, no vendor lock-in.
